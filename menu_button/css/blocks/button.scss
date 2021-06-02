@@ -1,0 +1,46 @@
+.footer{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    .footer__button{
+        position: sticky;
+        margin-right: 30px;
+        width: 80px;
+        height: 80px;
+        background: #f7df1e;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+
+        .barra{
+            position: absolute;
+            width: 30px;
+            height: 7px;
+            background: #222;
+            border-radius: 3px;
+
+            &::after, &::before{
+                content: "";
+                position: absolute;
+                width: 30px;
+                height: 7px;
+                background: #222;
+                border-radius: 3px;
+            }
+            &::after{
+                margin-top: -12px;
+            }
+            &::before{
+                margin-top: 12px;
+            }
+        }
+
+    }
+
+    .footer__button:hover{
+        transform: scale(1.1);
+    }
+}
